@@ -14,7 +14,7 @@ The format for including the time spent must be a parenthetical suffix on the co
 $ git commit -m "implement XYZ feature (120m)"
 ```
 
-This facilitates automation of the requirements of the [Satoshi Fairware License].
+This facilitates automation of the requirements of the [Satoshi Fairware License](https://satoshidnc.com/licenses).
 
 
 ## Files:
