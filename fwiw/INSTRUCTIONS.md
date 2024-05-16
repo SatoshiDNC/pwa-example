@@ -19,4 +19,6 @@ This facilitates automation of the requirements of the [Satoshi Fairware License
 
 ## Files:
 
-- META-EFFORTS.md - This file contains a list of work performed outside of the repository. Commits to this file allow time spent on the project to be recorded in cases where no other files are affected.
+- `INSTRUCTIONS.md` - This file.
+
+- `META-EFFORTS.md` - This file contains a list of work performed outside of the repository. Commits to this file allow time spent on the project to be recorded in cases where no other files are affected.
