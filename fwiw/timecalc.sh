@@ -55,7 +55,8 @@ echo "Calculating time contributed by $num_devs devs:"
 total_time_spent=0
 total_pay_earned=0
 : > $JSON_OUT
-echo "{\"commit\":\"$COMMIT\",\"data\":[" >> $JSON_OUT
+echo "{" >> $JSON_OUT
+echo "  \"contributors\":[" >> $JSON_OUT
 for ((i = 0; i < ${#unique_devs[@]}; i+=2)); do
   dev="${unique_devs[i]}"
   addr="${unique_devs[i+1]}"
@@ -84,7 +85,7 @@ for ((i = 0; i < ${#unique_devs[@]}; i+=2)); do
       if [ "$devhours" != "" ]; then
         infocode="${devhours}h@${cur_payrate}/h"
       elif [ "$devmins" != "" ]; then
-        infocode="${devhours}m@${cur_payrate}/h"
+        infocode="${devmins}m@${cur_payrate}/h"
       else
         infocode="0h@${cur_payrate}/h" # 0h for syntax; will behave like none specified
       fi
@@ -157,14 +158,16 @@ for ((i = 0; i < ${#unique_devs[@]}; i+=2)); do
   else
     comma=""
   fi
-  echo "{time_secs:$time_spent,pay_asked:$pay_earned,dev_nym:\"$dev\",lightning_address:\"$addr\"}$comma" >> $JSON_OUT
+  echo "    {nym:\"$dev\", time_secs:$time_spent, pay_asked:$pay_earned, lightning_address:\"$addr\"}$comma" >> $JSON_OUT
 
   time_spent_totals+=($time_spent)
   pay_earned_totals+=($pay_earned)
   total_time_spent=$(( total_time_spent + time_spent ))
   total_pay_earned=$(( total_pay_earned + pay_earned ))
 done
-echo "]}" >> $JSON_OUT
+echo "  ]," >> $JSON_OUT
+echo "  \"commit\":\"$COMMIT\"" >> $JSON_OUT
+echo "}" >> $JSON_OUT
 
 # print summary
 echo "$total_time_spent => $total_pay_earned" overall
