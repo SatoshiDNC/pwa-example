@@ -1,0 +1,51 @@
+{
+  "name": "PWA Example",
+  "short_name": "PWA Example",
+  "icons": [
+    {
+      "src": "/app-icon/512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    },
+    {
+      "src": "/app-icon/512-maskable.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "maskable"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "id": "/",
+  "theme_color": "#4287f5",
+  "background_color": "#fff",
+  "lang": "en-US",
+  "description": "This is an example of a progressive web app.",
+  "screenshots": [
+    {
+      "src": "app-screenshots/narrow1.png",
+      "type": "image/png",
+      "sizes": "540x1200",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "app-screenshots/narrow2.png",
+      "type": "image/png",
+      "sizes": "540x1200",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "app-screenshots/wide1.png",
+      "type": "image/png",
+      "sizes": "1288x872",
+      "form_factor": "wide"
+    },
+    {
+      "src": "app-screenshots/wide2.png",
+      "type": "image/png",
+      "sizes": "1288x872",
+      "form_factor": "wide"
+    }
+  ],
+  "categories": ["developer", "education"]
+}
