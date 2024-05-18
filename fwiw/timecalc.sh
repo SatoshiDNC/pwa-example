@@ -158,7 +158,7 @@ for ((i = 0; i < ${#unique_devs[@]}; i+=2)); do
   else
     comma=""
   fi
-  echo "    {nym:\"$dev\", time_secs:$time_spent, pay_asked:$pay_earned, lightning_address:\"$addr\"}$comma" >> $JSON_OUT
+  echo "    {\"nym\":\"$dev\", \"time_secs\":$time_spent, \"pay_asked\":$pay_earned, \"lightning_address\":\"$addr\"}$comma" >> $JSON_OUT
 
   time_spent_totals+=($time_spent)
   pay_earned_totals+=($pay_earned)
