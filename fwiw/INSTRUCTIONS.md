@@ -24,8 +24,14 @@ This facilitates automation of the requirements of the [Satoshi Fairware License
 
 ## Files:
 
+- `APP_LICENSE.js` - The license summary to be attached to the bundled app.
+
+- `FILE_LICENSE.js` - The license summary to be attached to each source code file.
+
 - `INSTRUCTIONS.md` - This file.
 
-- `META-EFFORTS.md` - Contains a list of work performed outside of the repository. Commits to this file are for time spent on the project to be recorded in cases where no other files are affected.
+- `META_EFFORTS.md` - Contains a list of work performed outside of the repository. Commits to this file are for time spent on the project to be recorded in cases where no other files are affected.
+
+- `timecalc.json` - Generated output of `timecalc.sh` to be bundled with the app.
 
 - `timecalc.sh` - Calculates the total time each dev contributed to the current git repo, and the total wages asked.
