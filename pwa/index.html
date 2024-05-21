@@ -9,6 +9,16 @@
     <!-- <script src="init.js" type="module" charset="utf-8"></script> -->
 </head>
 <body style="text-align: center; touch-action: none; overflow: hidden; margin: 0; padding: 0;">
-    <canvas id="app1"></canvas>
+  <script type="module">
+    import {launchModal} from '/lib/bitcoin-connect/bitcoin-connect.mjs'
+    import '/lib/bitcoin-connect/bitcoin-connect.mjs'
+
+    document.addEventListener("DOMContentLoaded", (event) => {
+      console.log("DOM fully loaded and parsed")
+      launchModal()
+    })
+  </script>
+  <bc-button></bc-button>
+  <canvas id="app1"></canvas>
 </body>
 </html>
