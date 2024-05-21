@@ -11,6 +11,16 @@
 <body style="text-align: center; touch-action: none; overflow: hidden; margin: 0; padding: 0;">
   <script type="module">
     import 'https://esm.sh/@getalby/bitcoin-connect@3.4.2'
+    import {
+      init,
+      launchModal,
+      launchPaymentModal,
+      requestProvider,
+    } from 'https://esm.sh/@getalby/bitcoin-connect@3.4.2'
+
+    init({
+      appName: 'PWA Example',
+    })
 
     document.addEventListener("DOMContentLoaded", (event) => {
     })
