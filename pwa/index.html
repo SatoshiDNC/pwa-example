@@ -22,7 +22,7 @@
       appName: 'PWA Example',
     })
 
-    function testPaymentModal() {
+    window.testPaymentModal = function() {
       console.log('test')
       launchPaymentModal()
     }
@@ -31,7 +31,7 @@
     })
   </script>
   <bc-button></bc-button>
-  <span onclick="console.log('click');testPaymentModal()">test</span>
+  <span onclick="console.log('click');window.testPaymentModal()">test</span>
   <canvas id="app1"></canvas>
 </body>
 </html>
