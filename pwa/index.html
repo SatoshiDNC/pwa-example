@@ -22,11 +22,16 @@
       appName: 'PWA Example',
     })
 
+    function testPaymentModal() {
+      console.log('test')
+      launchPaymentModal()
+    }
+
     document.addEventListener("DOMContentLoaded", (event) => {
     })
   </script>
   <bc-button></bc-button>
-  <span onclick="console.log('click');launchPaymentModal()">test</span>
+  <span onclick="console.log('click');testPaymentModal()">test</span>
   <canvas id="app1"></canvas>
 </body>
 </html>
