@@ -24,7 +24,10 @@
 
     window.testPaymentModal = function() {
       console.log('test')
-      launchPaymentModal()
+      launchPaymentModal({
+        invoice: 'lnbc10n1pnyln5msp50nepkmycsd6ek5e3ktd3g9avk6y3h6tq5afkrhrjxjuyzu6sudzspp5tl033nmw39s7yh8vynf6vy2s7t9d0ljfzqc9s2hw47gag9007glqdq8w3jhxaqcqpjrzjqt884w67vfvepaufs5stefepk7hrzct9amupzv7uleqx3l8mudavvrylucqqpusqqqqqqqqqqqqqqqsq2q9qxpqysgqx0k75yztchgxpv5g75egmdgcl49wyyp9u4jrvsrrrcqug00f4mrrlknsy9fnfnrnsefe38whyv0wtnwfmen4xy3daqd2xh57wavy08qq9nm0a3',
+        onPaid: ({preimage}) => alert('Paid: ' + preimage), // NOTE: only fired if paid with WebLN - see full api documentation below
+      })
     }
 
     document.addEventListener("DOMContentLoaded", (event) => {
