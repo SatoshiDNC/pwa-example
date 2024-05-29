@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width" />
     <meta name="theme-color" content="#000000" />
     <!-- <script src="init.js" type="module" charset="utf-8"></script> -->
+    <script src='https://www.unpkg.com/nostr-login@latest/dist/unpkg.js'></script>
 </head>
 <body style="text-align: center; touch-action: none; overflow: hidden; margin: 0; padding: 0;">
   <script type="module">
@@ -30,6 +31,17 @@
     }
 
     document.addEventListener("DOMContentLoaded", (event) => {
+    })
+  </script>
+  <script type="module">
+    document.addEventListener('nlAuth', (e) => {
+      console.log(e)
+      // // type is login, signup or logout
+      // if (e.detail.type === 'login' || e.detail.type === 'signup') {
+      //   onLogin();  // get pubkey with window.nostr and show user profile
+      // } else {
+      //   onLogout()  // clear local user data, hide profile info 
+      // }
     })
   </script>
   <span onclick="console.log('click');window.testPaymentModal()" style="cursor: pointer;">buy</span><br>
