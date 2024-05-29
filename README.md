@@ -1,6 +1,6 @@
 # PWA Example
 
-Live demo: [pwa-example.satoshidnc.com](pwa-example.satoshidnc.com)
+Live demo: [pwa-example.satoshidnc.com](https://pwa-example.satoshidnc.com)
 
 ## To build:
 
