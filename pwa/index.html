@@ -43,6 +43,10 @@
       //   onLogout()  // clear local user data, hide profile info 
       // }
     })
+
+    document.addEventListener("DOMContentLoaded", (event) => {
+      console.log(window.nostr.getPublicKey())
+    })
   </script>
   <span onclick="console.log('click');window.testPaymentModal()" style="cursor: pointer;">buy</span><br>
   <canvas id="app1"></canvas>
