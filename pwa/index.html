@@ -45,7 +45,7 @@
     })
 
     document.addEventListener("DOMContentLoaded", (event) => {
-      console.log(window.nostr.getPublicKey())
+      window.nostr.getPublicKey().then(result => console.log(result))
     })
   </script>
   <span onclick="console.log('click');window.testPaymentModal()" style="cursor: pointer;">buy</span><br>
