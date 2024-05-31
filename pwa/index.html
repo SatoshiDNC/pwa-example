@@ -48,7 +48,7 @@
     document.addEventListener("DOMContentLoaded", (event) => {
       const preloadedScript = document.createElement("script");
       preloadedScript.src = "https://www.unpkg.com/nostr-login@latest/dist/unpkg.js";
-      document.body.appendChild(preloadedScript);
+      document.head.appendChild(preloadedScript);
       setInterval(() => {
         if (window.nostr) {
           console.log('readu')
