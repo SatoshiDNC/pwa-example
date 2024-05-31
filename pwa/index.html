@@ -46,6 +46,9 @@
     })
 
     document.addEventListener("DOMContentLoaded", (event) => {
+      const preloadedScript = document.createElement("script");
+      preloadedScript.src = "https://www.unpkg.com/nostr-login@latest/dist/unpkg.js";
+      document.body.appendChild(preloadedScript);
       window.nostr.getPublicKey().then(result => console.log(result))
     })
   </script>
