@@ -49,7 +49,14 @@
       const preloadedScript = document.createElement("script");
       preloadedScript.src = "https://www.unpkg.com/nostr-login@latest/dist/unpkg.js";
       document.body.appendChild(preloadedScript);
-      window.nostr.getPublicKey().then(result => console.log(result))
+      setInterval(() => {
+        if (window.nostr) {
+          console.log('readu')
+          window.nostr.getPublicKey().then(result => console.log(result))
+        } else {
+          console.log('.')
+        }
+      }, 1000)
     })
   </script>
   <span onclick="console.log('click');window.testPaymentModal()" style="cursor: pointer;">buy</span><br>
