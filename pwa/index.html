@@ -7,8 +7,7 @@
     <meta name="viewport" content="width=device-width" />
     <meta name="theme-color" content="#000000" />
     <!-- <script src="init.js" type="module" charset="utf-8"></script> -->
-    <!-- <script src='https://www.unpkg.com/nostr-login@latest/dist/unpkg.js'></script> -->
-    <link rel="preload" href="https://www.unpkg.com/nostr-login@latest/dist/unpkg.js" as="script"/>
+    <script src='https://www.unpkg.com/nostr-login@latest/dist/unpkg.js'></script>
 </head>
 <body style="text-align: center; touch-action: none; overflow: hidden; margin: 0; padding: 0;">
   <script type="module">
@@ -46,17 +45,7 @@
     })
 
     document.addEventListener("DOMContentLoaded", (event) => {
-      const preloadedScript = document.createElement("script");
-      preloadedScript.src = "https://www.unpkg.com/nostr-login@latest/dist/unpkg.js";
-      document.head.appendChild(preloadedScript);
-      setInterval(() => {
-        if (window.nostr) {
-          console.log('readu')
-          window.nostr.getPublicKey().then(result => console.log(result))
-        } else {
-          console.log('.')
-        }
-      }, 1000)
+      window.nostr.getPublicKey().then(result => console.log(result))
     })
   </script>
   <span onclick="console.log('click');window.testPaymentModal()" style="cursor: pointer;">buy</span><br>
