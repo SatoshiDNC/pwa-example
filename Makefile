@@ -38,12 +38,11 @@ release:
 .PHONY: clean
 clean:
 	@$(MAKE) -sC fwiw clean
-	@$(MAKE) -sC lib clean
 	@$(MAKE) -sC src clean
 	@-rm -f index.html worker.js
 
 # Textbook subdirectory recursion
-SUBDIRS = fwiw lib src
+SUBDIRS = fwiw src
 .PHONY: subdirs $(SUBDIRS)
 subdirs: $(SUBDIRS)
 $(SUBDIRS):
