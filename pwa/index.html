@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>PWA Example</title>
-    <meta charset="UTF-8" />
-    <link rel="manifest" href="/app.webmanifest" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="theme-color" content="#000000" />
-    <!-- <script src="init.js" type="module" charset="utf-8"></script> -->
-    <script src='./lib/nostr-login.js' data-bunkers="misllaves.satoshidnc.com,acceso.satoshidnc.com"></script>
+  <title>PWA Example</title>
+  <meta charset="UTF-8" />
+  <link rel="manifest" href="/app.webmanifest" />
+  <meta name="viewport" content="width=device-width" />
+  <meta name="theme-color" content="#000000" />
+  <!-- <script src="init.js" type="module" charset="utf-8"></script> -->
+  <script src='./lib/nostr-login.js' data-bunkers="misllaves.satoshidnc.com,acceso.satoshidnc.com"></script>
+  <script type="importmap">
+    { "imports": {
+        "@getalby/sdk": "https://esm.sh/@getalby/sdk@latest",
+    } }
+  </script>
 </head>
 <body style="text-align: center; touch-action: none; overflow: hidden; margin: 0; padding: 0;">
   <script type="module">
