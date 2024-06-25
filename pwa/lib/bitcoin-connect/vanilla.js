@@ -1,3 +1,0 @@
-/* esm.sh - esbuild bundle(zustand@4.5.2/vanilla) es2022 production */
-var u=t=>{let e,o=new Set,r=(s,i)=>{let n=typeof s=="function"?s(e):s;if(!Object.is(n,e)){let d=e;e=i??(typeof n!="object"||n===null)?n:Object.assign({},e,n),o.forEach(b=>b(e,d))}},c=()=>e,a={setState:r,getState:c,getInitialState:()=>l,subscribe:s=>(o.add(s),()=>o.delete(s)),destroy:()=>{o.clear()}},l=e=t(r,c,a);return a},f=t=>t?u(t):u,g=t=>f(t);export{f as createStore,g as default};
-//# sourceMappingURL=vanilla.js.map
