@@ -8,6 +8,12 @@
   <meta name="theme-color" content="#000000" />
   <!-- <script src="init.js" type="module" charset="utf-8"></script> -->
   <script src='./lib/nostr-login.js' data-bunkers="misllaves.satoshidnc.com,acceso.satoshidnc.com"></script>
+  <script src='./lib/gl-matrix.js'></script>
+  <script src='./lib/fireglass.min.js'></script>
+  <script src='./lib/rune.min.js'></script>
+  <script src='./js/globals.js'></script>
+  <script src='./js/fonts/defaultFont.js'></script>
+  <script src='./js/splash.js'></script>
   <script type="importmap">
     { "imports": {
       "@getalby/sdk": "https://esm.sh/@getalby/sdk@3.5.1",
@@ -19,7 +25,8 @@
 </head>
 <body style="text-align: center; touch-action: none; overflow: hidden; margin: 0; padding: 0;">
   <script type="module">
-    //import 'https://esm.sh/@getalby/bitcoin-connect@3.2.2'
+    // This module demonstrates use of Bitcoin Connect.
+
     import {
       init,
       launchModal,
@@ -42,6 +49,8 @@
     })
   </script>
   <script type="module">
+    // This module demonstrates use of Nostr Login.
+
     document.addEventListener('nlAuth', (e) => {
       console.log(e.detail)
       // // type is login, signup or logout
@@ -54,6 +63,30 @@
 
     document.addEventListener("DOMContentLoaded", (event) => {
       window.nostr.getPublicKey().then(result => console.log(result))
+    })
+  </script>
+  <script type="module">
+    // This module demonstrates use of Fireglass and Rune.
+    document.addEventListener("DOMContentLoaded", (event) => {
+
+      // Initialize globals
+      const canvas = document.querySelector('#app1')
+      vp.initialize(canvas)
+      gl = vp.getContext()
+      df.glSet(gl)
+
+      // Wait for fonts to load
+      const startupCheck = (f) => {
+        if (defaultFont.isReady()) {
+          defaultFont.init()
+          f()
+        } else {
+          setTimeout(startupCheck, 10)
+        }
+      }
+      startupCheck(() => {
+        vp.start(splash, true)
+      })
     })
   </script>
   <span onclick="console.log('click');window.testPaymentModal()" style="cursor: pointer;">buy</span><br>
